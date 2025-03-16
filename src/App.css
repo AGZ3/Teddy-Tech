@@ -1,0 +1,220 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Teddy Bear';
+  src: url('/assets/teddy_bear.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header h1 {
+  font-family: 'Teddy Bear', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px; /* Wider container */
+  height: 800px; /* Fixed height */
+  margin: 20px auto; /* Center the container */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for positioning the character icon */
+  padding-top: 50px; /* Add padding to make space for the character icon */
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    height: 80vh;
+  }
+}
+
+/* Character Icon */
+.character-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  background-image: url('/assets/teddy_tech.png'); /* Set the image as a background */
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the image */
+}
+
+/* Messages Area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  padding-top: 50px;
+  overflow-y: auto;
+  background-color: #3e3e47;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds spacing between messages */
+}
+
+/* Individual Message */
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  min-width: 50px;
+  word-wrap: break-word;
+  display: block;
+  clear: both;
+  opacity: 0; /* Start with invisible bubbles */
+  transform: scale(0.8); /* Start slightly smaller */
+  animation: popUp 0.3s ease-out forwards; /* Apply the animation */
+}
+
+/* User Message */
+.message.user {
+  background-color: #007bff;
+  color: white;
+  float: right;
+  margin-left: auto;
+  text-align: right;
+  padding: 10px 15px 10px 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* AI Message */
+.message.ai {
+  background-color: #e9e9ef;
+  color: #333;
+  float: left;
+  margin-right: auto;
+  text-align: left;
+  padding: 0px 15px 0px 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.ai {
+  animation-delay: 0.2s; /* Delay AI messages by 0.5 seconds */
+}
+
+/* Pop-Up Animation */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  padding: 20px;
+  background-color: #1a1a24;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  background-color: #3e3e47;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-area button:hover {
+  background-color: #595964;
+}
+
+/* Scrollbar Styling */
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #3e3e47;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #595964;
+}
+
+/* Header */
+.header {
+  width: 100%;
+}
+
+/* Typing Bubble */
+.messages .typing-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px; /* Increase padding for more height */
+  background-color: #e9e9ef;
+  border-radius: 15px;
+  width: 40px; /* Adjust width as needed */
+  height: 30px; /* Set a fixed height to contain the dots */
+}
+
+.messages .typing-bubble .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0 3px;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.messages .typing-bubble .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.messages .typing-bubble .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+}
