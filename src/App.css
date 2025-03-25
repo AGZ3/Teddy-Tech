@@ -88,9 +88,9 @@
 .message.user {
   background-color: #007bff;
   color: white;
-  float: right;
+  float: left;
   margin-left: auto;
-  text-align: right;
+  text-align: left;
   padding: 10px 15px 10px 10px;
   max-width: 80%;
   word-wrap: break-word;
@@ -217,4 +217,21 @@
   40% {
     transform: translateY(-5px);
   }
+}
+
+/* Main Menu */
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #23232b;
+  z-index: 1000;
+}
+
+.main-menu h1 {
+  font-family: 'Teddy Bear', sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  padding: 1.5rem;
 }

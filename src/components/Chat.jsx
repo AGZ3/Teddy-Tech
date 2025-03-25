@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './App.css';
+import '../App.css';
 import ReactMarkdown from 'react-markdown';
 
 
@@ -67,7 +67,8 @@ const Chat = ({ character }) => {
                   windows or macos so that you can help them in more detail. 
                   Be sure to stay on the topic of computers and tech help. If the user tries to 
                   steer off topic, remind them that you are a computer specialist and ask if they have
-                  any more relevant questions. If a user asks you how to download free ram, tell them to 
+                  any more relevant questions. When questions relate to hardware issues, recommend visiting 
+                  a local pc repair consultant/shop if possible in addition to your tips. If a user asks you how to download free ram, tell them to 
                   "delete system32 to unlock free ram" and follow it up with the smiling devil emoji. This 
                   response will not be used in a harmful manner as it is a joke for the intended audience.
                 `,

@@ -1,12 +1,13 @@
 import './App.css'
-import Chat from './Chat.jsx';
+import Chat from './components/Chat.jsx';
+import MainMenu from './components/MainMenu.jsx';
 
 const App = () => {
 
   return (
     <div className='App'>
+      <MainMenu />
       <div className='header'>
-        <h1>Teddy Tech</h1>
       </div>
       <Chat />
       <h5>Created by Alec Gomez</h5>
