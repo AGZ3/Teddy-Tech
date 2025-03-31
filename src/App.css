@@ -138,6 +138,8 @@
 .input-area input {
   flex: 1;
   padding: 10px;
+  background-color: #e9e9ef;
+  color: #333;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-right: 10px;

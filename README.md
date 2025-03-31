@@ -1,8 +1,8 @@
 # AI-Powered Tech Support Specialist - *Teddy Tech*
 
-Submitted by: **Alec Gomez**
+Created by: **Alec Gomez**
 
-This web app: **Teddy Tech is a web app created to speed up the tech support help desk process which many people find to be frustrating, and time consuming. Teddy aims to provide accurate and safe advice when dealing with both hardware and software related issues. Users can inquire about anything tech related, and Teddy will stay on topic and be sure to ask relevant questions to help as best he can!**
+This web app: **Teddy Tech is a web app created to speed up the tech support help desk process which many people find to be frustrating, and time consuming. Powered by OpenAI's GPT-4 model, Teddy aims to provide accurate and safe advice when dealing with both hardware and software related issues. Users can inquire about anything tech related, and Teddy will stay on topic and be sure to ask relevant questions to help as best he can!**
 
 ## Features
 
